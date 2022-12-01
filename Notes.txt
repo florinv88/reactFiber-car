@@ -1,0 +1,74 @@
+NOTITEE
+
+Cum initializezi un proiect vite ? 
+npx create-vite 
+
+Care este libraria pentru React Fiber  ?
+npm i three @react-three/fiber 
+
+Care este libraria pentru React Drei ? 
+npm i three @react-three/drei
+
+Care este librarie pentru Gsap ? 
+npm i gsap 
+
+Am folosit Suspense din React!! 
+-Folosita pentru a ii comunica DOM-ului ca tot ce are ca children sa fie incarcat doar in conditia in care este requested.
+
+
+In plus : 
+Canvas --> Tot programul este intr-un canvas.
+!!Nu exista elemente din DOM-ul normal .
+Pentru a adauga elemente din DOM trebuie folosit <Html> </Html> din DREI . 
+
+Video 2 : 
+
+Pentru a crea un mesh . 
+Ai nevoie de 2 proprietati : Geometry and Material
+<mesh> 
+<geometryName args>
+<materialName args>
+</mesh>
+
+
+!Ambient Light 
+Lumineaza toate obiectele din scena in mod egal
+
+Am adaugat 2 proprietati mesh-urilor (position , rotation ). Ambele primesc ca parametru un vector3(x,y,z)
+Am introdus perspective Camera din react/drei . Are mai multi parametrii printre care : 
+1.makeDefault --> pt a inlocui camera initiala generata de Canvas
+2.position(x,y,z)
+
+!Toate obiectele create in Three au ca pozitie initiala 0,0,0
+
+
+Video 3 (Camera & Orbit controls) :
+
+Orbit Controls --- > Importata din Drei .
+
+Preia controlul asupra camerei initializata initial . 
+Creeaza un unghi , unghi polar . Miscare ei este circulara . 
+
+
+useFrame (state=>{})   -->
+Pentru fiecare frame in parte (default 60) call function
+
+Asimuthal Angle -  este  masura unghiului format prin deplasarea camerei fata de pozitia initiala . 
+- Il folosim pentru a ne referi la deplasarea stanga-dreapta
+
+Pentru sus-jos --> 
+Polorized Angle
+
+
+Video4 (LIGHST AND SHADOWS)
+
+Pentru a crea umbre ai nevoie de lumini . - Logic 
+Dar nu toate luminile creeaza umbre . 
+Vezi three js documentation.
+
+!!Dupa ce adaugi lumini , trebuie sa atribui castShadow , receiveShadow obiectelor + sa activezi shadows pe canvas
+
+
+
+
+
